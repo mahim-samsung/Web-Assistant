@@ -29,7 +29,7 @@ yarn-error.log*
 .env*
 
 out/
-build/
+# build/  # Commented out to keep build folder
 dist/
 
 # plasmo - https://www.plasmo.com

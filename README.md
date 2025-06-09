@@ -1,44 +1,48 @@
-# Webpilot
+# Web Assistant Chrome Extension
 
-![en_1](https://github.com/webpilot-ai/Webpilot/assets/6043666/03248355-bf09-4477-ba79-33fc0dba799c)
+A Chromium extension that provides AI-powered assistance for web browsing developed by Ontology Studio - Samsung Research.
 
-![en_2](https://github.com/webpilot-ai/Webpilot/assets/6043666/2b15641a-6060-4e52-8962-a4bc2e5983b8)
+## Installation
 
-![en_3](https://github.com/webpilot-ai/Webpilot/assets/6043666/29d43c63-c295-473a-a857-6960971f86e8)
+### Method 1: Direct Installation from Build
 
-![en_4](https://github.com/webpilot-ai/Webpilot/assets/6043666/d1df490c-f7f5-4d0d-895f-8dcbdba59955)
-
-Webpilot is a free, open-source "Copilot for web" that allows you to have free-form conversations with web pages or engage in automatic arguments with other users. Unlike ChatGPT, there is no need to chat or switch web pages, and no need to constantly copy and paste back and forth. 
-
-Chrome Extension: [Add to Chrome](https://chrome.google.com/webstore/detail/Webpilot/biaggnjibplcfekllonekbonhfgchopo?utm_source=link&amp;utm_medium=git&amp)
-
-Official Website: [HomePage](https://www.Webpilot.ai/)
-
-Dev Team: dev@webpilot.ai
-
-
-## Getting Started
-
-First, run the development server:
+1. Download or clone this repository:
 
 ```bash
-pnpm dev
-# or
-npm run dev
-# or
-yarn dev
+git clone https://github.com/mahim-samsung/Web-Assistant.git
 ```
 
-Open your Chrome browser and load the appropriate development build：
+2. Open Chrome/Chromium browser
+3. Go to `chrome://extensions/`
+4. Enable "Developer mode" (toggle in the top right corner)
+5. Click "Load unpacked"
+6. Navigate to and select the `build/chrome-mv3-prod` folder from the downloaded repository
 
-1. Go to [chrome://extensions](chrome://extensions).
-2. At the top right, turn on Developer mode.
-3. Click Load unpacked.
-4. Find and select the `build/chrome-mv3-dev` folder.
-5. Pin this extension to your Chrome toolbar.
-6. After installation, please refresh the page where you want to select text before using this extension.
+### Method 2: Build from Source
 
+1. Clone the repository:
 
-## Star History
+```bash
+git clone https://github.com/mahim-samsung/Web-Assistant.git
+cd Web-Assistant
+```
 
-[![Star History Chart](https://api.star-history.com/svg?repos=webpilot-ai/Webpilot&type=Date)](https://star-history.com/#webpilot-ai/Webpilot&Date)
+2. Install dependencies:
+
+```bash
+npm install
+# or
+pnpm install
+```
+
+3. Build the extension:
+
+```bash
+npm run build
+# or
+pnpm build
+```
+
+## Requirements
+
+- Chromium browser
