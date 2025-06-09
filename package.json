@@ -1,0 +1,84 @@
+{
+  "name": "webpilot",
+  "version": "0.10.0204",
+  "author": "webpilot.ai",
+  "displayName": "Samsung Research - Web assistant for all",
+  "description": "__MSG_extensionDescription__",
+  "packageManager": "pnpm@8.2.0",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "lint": "pnpm lint:eslint && pnpm lint:stylelint && pnpm lint:prettier",
+    "lint:eslint": "eslint './**/*.{vue,ts,tsx,js}' --cache --fix",
+    "lint:stylelint": "stylelint './{src,assets}/**/*.{vue,scss,css}' --cache --fix",
+    "lint:prettier": "prettier './*.{json,md}' './{src,assets}/**/*.{json,md}' --cache --write",
+    "gettext": "pnpm gettext:extract && pnpm gettext:compile && pnpm post-gettext",
+    "gettext:extract": "vue-gettext-extract",
+    "gettext:compile": "vue-gettext-compile",
+    "post-gettext": "node ./scripts/i18n/postGettext.js"
+  },
+  "lint-staged": {
+    "*.{vue,ts,tsx,js}": "eslint --cache --fix",
+    "*.{vue,scss,css}": "stylelint --cache --fix",
+    "*.{json,md}": "prettier --cache --write"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.4.4",
+    "@plasmohq/messaging": "^0.4.0",
+    "@plasmohq/storage": "^1.6.1",
+    "@vueuse/core": "^10.1.2",
+    "copy-to-clipboard": "^3.3.3",
+    "js-tiktoken": "^1.0.7",
+    "jsonfile": "^6.1.0",
+    "pangu": "^4.0.7",
+    "pinia": "^2.0.36",
+    "plasmo": "0.76.3",
+    "vue": "^3.5.16",
+    "vue-demi": "^0.14.10",
+    "vue-toast-notification": "^3.1.1",
+    "vue3-markdown-it": "^1.0.10",
+    "vue3-popper": "^1.5.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@parcel/optimizer-data-url": "2.9.1",
+    "@parcel/transformer-inline-string": "2.9.1",
+    "@types/chrome": "0.0.231",
+    "@types/node": "18.15.11",
+    "eslint": "^8.38.0",
+    "eslint-config-standard-one": "^0.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "2.8.7",
+    "prettier-config-standard-one": "^0.0.1",
+    "stylelint": "^15.5.0",
+    "stylelint-config-standard-one": "^0.0.1",
+    "typescript": "5.0.4",
+    "vue3-gettext": "2.5.0-alpha.1"
+  },
+  "manifest": {
+    "default_locale": "en",
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "permissions": [
+      "tabs",
+      "storage",
+      "clipboardWrite"
+    ],
+    "web_accessible_resources": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "resources": [
+          "manifest.json",
+          "*.css"
+        ]
+      }
+    ]
+  }
+}

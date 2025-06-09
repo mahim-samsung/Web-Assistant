@@ -1,0 +1,40 @@
+/* stylelint-disable */
+#webpilot-template {
+  @import './reset.scss';
+  @import './solarized_light.scss';
+}
+#webpilot-content {
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  pre {
+    padding: 0;
+  }
+  code {
+    font-size: 14px;
+    padding: 1 5px;
+    background: #fdf6e3;
+    color: #657b83;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #webpilot-template {
+    @import './solarized_dark.scss';
+  }
+  #webpilot-content {
+    p {
+    color: #dcdcdc;
+    }
+    li {
+      color: #dcdcdc;
+    }
+    code {
+      background: #002b36;
+      color: #839496;
+    }
+  }
+}
