@@ -2,7 +2,7 @@
   <section :class="$style.headerPanel">
     <section :class="$style.headerLogos">
       <img :class="$style.logo" :src="SamsungLogo" />
-      <span :class="$style.headerText">Samsung</span>
+      <span :class="$style.headerText">Samsung AI</span>
     </section>
     <section :class="$style.headerIcons">
       <Popper v-show="false" :class="$style.popover" hover offset-distance="8" placement="top">
@@ -25,7 +25,7 @@
 import {sendToBackground} from '@plasmohq/messaging'
 import Popper from 'vue3-popper'
 
-import SamsungLogo from '~assets/icon/icon.png'
+import SamsungLogo from 'data-base64:~assets/icon/icon.png'
 
 import InteractiveIcon from './InteractiveIcon/InteractiveIcon.vue'
 

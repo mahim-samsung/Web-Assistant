@@ -206,6 +206,7 @@ const popupPosition = computed(() => {
   return {x, y}
 })
 
+// eslint-disable-next-line no-unused-vars
 const shortcutText = computed(() => {
   return formatShortcut(store.config.customShortcut)
 })
