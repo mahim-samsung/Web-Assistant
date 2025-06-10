@@ -4,13 +4,24 @@
     <div :class="$style['contributors-wrap']">
       <div :class="$style['contributor-card']">
         <div :class="$style['card-avatar']">
-          <IconPersonFilled style="width: 40px; height: 40px;" />
+          <img alt="Avatar" :src="proImage" style="width: 48px; height: 48px; border-radius: 50%" />
         </div>
         <div>
           <div :class="$style['card-title']">
             <span :class="$style['card-name']">Mahbub Islam Mahim</span>
           </div>
           <div :class="$style['card-desc']">Senior Software Engineer</div>
+        </div>
+      </div>
+      <div :class="$style['contributor-card']">
+        <div :class="$style['card-avatar']">
+          <IconPersonOutline style="width: 48px; height: 48px" />
+        </div>
+        <div>
+          <div :class="$style['card-title']">
+            <span :class="$style['card-name']">Tahmid Imtiaz Imu</span>
+          </div>
+          <div :class="$style['card-desc']">Software Engineer</div>
         </div>
       </div>
     </div>
@@ -26,7 +37,8 @@
 <script setup lang="ts">
 import {ref, onMounted} from 'vue'
 
-import IconPersonFilled from '../images/icon-person-filled.vue'
+import proImage from '../images/pro.jpg'
+import IconPersonOutline from '../images/icon-person-outline.vue'
 
 const ABOUT_API = 'https://raw.githubusercontent.com/webpilot-ai/data/main/about_vue3.json'
 
