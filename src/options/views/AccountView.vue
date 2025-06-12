@@ -1,6 +1,6 @@
 <template>
   <div :class="$style['account-view']">
-    <h2 :class="$style.title">Credit</h2>
+    <h2 :class="$style.title">LLM Usage Details</h2>
     <div :class="$style['credit-wrap']">
       <CreditRadioGroup
         v-model="creditSource"

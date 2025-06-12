@@ -13,10 +13,10 @@
         :class="picked !== CREDIT_SOURCES.WEBPILOT || $style['radio-activated']"
         for="webpilot"
       >
-        Webpilot Credit
+        Total LLM requests
       </label>
     </div>
-    <div :class="$style['radio-wrap']">
+    <!-- <div :class="$style['radio-wrap']">
       <input
         id="openai"
         v-model="picked"
@@ -28,7 +28,7 @@
       <label :class="picked !== CREDIT_SOURCES.OPENAI || $style['radio-activated']" for="openai">
         Open AI Credits
       </label>
-    </div>
+    </div> -->
   </div>
 </template>
 
